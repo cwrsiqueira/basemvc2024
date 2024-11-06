@@ -12,14 +12,22 @@ class Home extends Controller
 {
     private ?array $data = ['pagina' => 'Home'];
 
-    public function termosDeUsoEPoliticasDePrivacidade()
+    public function __construct()
     {
-        $this->data['contato'] = ENV['EMAIL_SUPORTE'];
-        $this->loadTemplate('termos-de-uso-e-politica-de-privacidade', $this->data);
+        if (isset($_SESSION['loggedUser'])) {
+            header("Location: " . URL . "dashboard");
+            exit;
+        }
     }
 
     public function index(): void
     {
-        $this->loadTemplate('home', $this->data);
+        $this->loadTemplate('welcome', $this->data);
+    }
+
+    public function termosDeUsoEPoliticasDePrivacidade()
+    {
+        $this->data['contato'] = ENV['EMAIL_SUPORTE'];
+        $this->loadTemplate('termos-de-uso-e-politica-de-privacidade', $this->data);
     }
 }
