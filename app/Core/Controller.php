@@ -15,6 +15,17 @@ class Controller
         }
     }
 
+    public function loadGuestTemplate($viewName, $viewData = [])
+    {
+        $templatePath = __DIR__ . '/../views/template-guest.php';
+        if (file_exists($templatePath)) {
+            require_once $templatePath;
+        } else {
+            require __DIR__ . '/../views/erro.php';
+            exit;
+        }
+    }
+
     public function loadViewInTemplate($viewName, $viewData = [])
     {
         extract($viewData);
