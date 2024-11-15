@@ -74,12 +74,6 @@
             <p>Estes Termos de Uso são regidos pelas leis brasileiras. Qualquer disputa relacionada ao uso do <?= ENV['APP_NAME'] ?> será resolvida nos tribunais competentes da cidade onde a empresa está sediada.</p>
         </section>
     </div>
-    <div class="container-fluid">
-        <footer class="footer text-center bg-dark text-light py-3 mt-auto">
-            <p>&copy; 2024 <?= ENV['APP_NAME'] ?> - Todos os direitos reservados.</p>
-            <p><a href="#privacy-policy" class="text-decoration-none">Política de Privacidade</a> | <a href="#terms-of-service" class="text-decoration-none">Termos de Uso</a> | <a href="<?= URL ?>" class="text-decoration-none">Voltar</a></p>
-        </footer>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

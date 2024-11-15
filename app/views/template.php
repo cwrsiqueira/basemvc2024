@@ -42,22 +42,22 @@
 
     <div class="content-wrapper d-flex flex-column min-vh-100">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="<?= URL ?>">
+            <div class="container text-center text-sm-start justify-content-center justify-content-sm-between">
+                <a class="navbar-brand d-flex flex-column flex-sm-row align-items-center align-items-center" href="<?= URL ?>">
                     <img src="<?= URL; ?>public/assets/img/logo.svg" alt="Logomarca" width="100" height="100" class="d-inline-block align-text-top">
                     <div class="ms-3">
-                        <h1 class="fs-2 fw-bold text-white mb-0"><?= ENV['APP_NAME'] ?></h1>
-                        <small class="text-secondary"><?= ENV['APP_DESCRIPTION'] ?></small>
+                        <h1 class="fs-2 fw-bold text-white mb-0"><small><?= ENV['APP_NAME'] ?></small></h1>
+                        <div class="text-secondary text-wrap fs-6 fs-md-3"><?= ENV['APP_DESCRIPTION'] ?></div>
                     </div>
                 </a>
                 <?php if (!empty($_SESSION['loggedUser'])) : ?>
-                    <div class="ms-auto">
+                    <div>
                         <a href="<?= URL ?>login/deslogar" class="btn btn-sm btn-outline-light">Sair</a>
                     </div>
                 <?php else : ?>
-                    <div class="ms-auto">
-                        <a href="<?= URL ?>login/" class="btn btn-sm btn-outline-light mx-1">Login</a>
-                        <a href="<?= URL ?>login/cadastro" class="btn btn-sm btn-outline-light mx-1">Cadastrar</a>
+                    <div>
+                        <a href="<?= URL ?>login/" class="btn btn-sm btn-outline-light mx-1"><small>Login</small></a>
+                        <a href="<?= URL ?>login/cadastro" class="btn btn-sm btn-outline-light mx-1"><small>Cadastrar</small></a>
                     </div>
                 <?php endif; ?>
             </div>
@@ -65,24 +65,38 @@
 
         <?php $this->loadViewInTemplate($viewName, $viewData);  ?>
 
-        <footer class="footer text-center bg-dark text-light py-3 mt-auto">
+        <footer class="footer text-center bg-dark text-light py-3 mt-auto d-flex flex-column gap-3">
             <div class="row">
-                <div class="col-sm-6 text-end">
-                    <p>Conheça nossos outros projetos nas redes sociais:</p>
+                <div class="col-sm-6">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <small>Conheça nossos outros projetos nas redes sociais</small>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col">
+                            <div class="d-flex justify-content-center gap-3">
+                                <a target="_blank" title="Github" href="https://github.com/cwrsiqueira"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+                                <a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/carloswagner1975/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                                <a target="_blank" title="Facebook" href="https://www.facebook.com/carloswagnerdev"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                                <a target="_blank" title="Youtube" href="https://www.youtube.com/@carlosjornadadev"><i class="fa-brands fa-square-youtube fa-2xl"></i></a>
+                                <a target="_blank" title="Site" href="https://carlosdev.com.br"><i class="fa-solid fa-globe fa-2xl"></i></a>
+                                <a title="Enviar e-mail" href="mailto:<?= ENV['EMAIL_SUPORTE'] ?>"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-6 text-start d-flex gap-3">
-                    <a target="_blank" title="Github" href="https://github.com/cwrsiqueira"><i class="fa-brands fa-square-github fa-2xl"></i></a>
-                    <a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/carloswagner1975/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-                    <a target="_blank" title="Facebook" href="https://www.facebook.com/carloswagnerdev"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
-                    <a target="_blank" title="Youtube" href="https://www.youtube.com/@carlosjornadadev"><i class="fa-brands fa-square-youtube fa-2xl"></i></a>
-                    <a target="_blank" title="Site" href="https://carlosdev.com.br"><i class="fa-solid fa-globe fa-2xl"></i></a>
-                    <a title="Enviar e-mail" href="mailto:<?= ENV['EMAIL_SUPORTE'] ?>"><i class="fa-solid fa-envelope fa-2xl"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <span class="fs-6"><small>&copy; 2024 <?= ENV['APP_NAME'] ?> - Todos os direitos reservados.</small></span><br>
-                    <span class="fs-6"><small><a href="<?= URL ?>home/termos-de-uso-e-politicas-de-privacidade">Termos de Uso e Políticas de Privacidade</a></small></span>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col">
+                            <small>&copy; 2024 <?= ENV['APP_NAME'] ?> - Todos os direitos reservados.</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <small><a href="<?= URL ?>home/termos-de-uso-e-politicas-de-privacidade">Termos de Uso e Políticas de Privacidade</a></small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
