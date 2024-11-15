@@ -52,7 +52,17 @@
                 </a>
                 <?php if (!empty($_SESSION['loggedUser'])) : ?>
                     <div>
-                        <a href="<?= URL ?>login/deslogar" class="btn btn-sm btn-outline-light">Sair</a>
+                        <?php
+                        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") .
+                            "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                        echo $url;
+                        if ($url !== URL . 'dashboard'):
+                        ?>
+                            <a href="<?= URL ?>" class="btn btn-sm btn-outline-light">Dashboard</a>
+                        <?php else: ?>
+                            <a href="<?= URL ?>login/deslogar" class="btn btn-sm btn-outline-light">Sair</a>
+                        <?php endif; ?>
                     </div>
                 <?php else : ?>
                     <div>
@@ -94,7 +104,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <small><a href="<?= URL ?>home/termos-de-uso-e-politicas-de-privacidade">Termos de Uso e Políticas de Privacidade</a></small>
+                            <small><a href="<?= URL ?>termos-de-uso">Termos de Uso e Políticas de Privacidade</a></small>
                         </div>
                     </div>
                 </div>

@@ -24,10 +24,4 @@ class Home extends Controller
     {
         $this->loadTemplate('welcome', $this->data);
     }
-
-    public function termosDeUsoEPoliticasDePrivacidade()
-    {
-        $this->data['contato'] = ENV['EMAIL_SUPORTE'];
-        $this->loadTemplate('termos-de-uso-e-politica-de-privacidade', $this->data);
-    }
 }

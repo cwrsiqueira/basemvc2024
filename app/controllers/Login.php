@@ -52,7 +52,7 @@ class Login extends Controller
             exit;
         }
 
-        $this->loadGuestTemplate('login', $this->data);
+        $this->loadGuestTemplate('layouts/login', $this->data);
     }
 
     public function logar()
@@ -104,7 +104,7 @@ class Login extends Controller
 
     public function cadastro(): void
     {
-        $this->loadGuestTemplate('cadastro', $this->data);
+        $this->loadGuestTemplate('layouts/cadastro', $this->data);
     }
 
     public function cadastrar(): void

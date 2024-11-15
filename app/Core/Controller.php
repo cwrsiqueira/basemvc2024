@@ -6,7 +6,7 @@ class Controller
 {
     public function loadTemplate($viewName, $viewData = [])
     {
-        $templatePath = __DIR__ . '/../views/template.php';
+        $templatePath = __DIR__ . '/../views/layouts/template.php';
         if (file_exists($templatePath)) {
             require_once $templatePath;
         } else {
@@ -17,7 +17,7 @@ class Controller
 
     public function loadGuestTemplate($viewName, $viewData = [])
     {
-        $templatePath = __DIR__ . '/../views/template-guest.php';
+        $templatePath = __DIR__ . '/../views/layouts/template-guest.php';
         if (file_exists($templatePath)) {
             require_once $templatePath;
         } else {

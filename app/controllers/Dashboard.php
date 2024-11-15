@@ -22,6 +22,6 @@ class Dashboard extends Controller
 
     public function index(): void
     {
-        $this->loadTemplate('dashboard', $this->data);
+        $this->loadTemplate('pages/dashboard', $this->data);
     }
 }

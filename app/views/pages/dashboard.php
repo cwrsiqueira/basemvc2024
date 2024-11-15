@@ -9,6 +9,8 @@
 
     <hr class="my-4">
 
+    Dashboard
+
     <?php if (!empty($_SESSION['alert']['msg'])) {
         echo $_SESSION['alert']['msg'];
         unset($_SESSION['alert']['msg']);
