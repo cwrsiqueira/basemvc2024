@@ -22,6 +22,6 @@ class Home extends Controller
 
     public function index(): void
     {
-        $this->loadTemplate('welcome', $this->data);
+        $this->loadGuestTemplate('welcome', $this->data);
     }
 }

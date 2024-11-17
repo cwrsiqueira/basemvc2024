@@ -174,7 +174,7 @@ class Login extends Controller
     public function enviarEmailCadastroSendGrid(string $paraNome, string $paraEmail, string $token): void
     {
         $email = new Mail();
-        $email->setFrom("cwrsiqueira@msn.com", ENV['APP_NAME']);
+        $email->setFrom(ENV['SENDGRID_SENDER'], ENV['APP_NAME']);
         $email->setSubject("Login " . ENV['APP_NAME']);
         $email->addTo($paraEmail, $paraNome);
 
@@ -253,7 +253,7 @@ class Login extends Controller
     public function enviarEmailLoginSendGrid(string $paraNome, string $paraEmail, string $token): void
     {
         $email = new Mail();
-        $email->setFrom("cwrsiqueira@msn.com", ENV['APP_NAME']);
+        $email->setFrom(ENV['SENDGRID_SENDER'], ENV['APP_NAME']);
         $email->setSubject("Login " . ENV['APP_NAME']);
         $email->addTo($paraEmail, $paraNome);
 
