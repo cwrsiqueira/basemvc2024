@@ -15,6 +15,6 @@ class TermosDeUso extends Controller
     public function index(): void
     {
         $this->data['contato'] = ENV['EMAIL_SUPORTE'];
-        $this->loadTemplate('termos-de-uso-e-politica-de-privacidade', $this->data);
+        $this->loadGuestTemplate('termos-de-uso-e-politica-de-privacidade', $this->data);
     }
 }

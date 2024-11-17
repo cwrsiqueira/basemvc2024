@@ -43,11 +43,11 @@
     <div class="content-wrapper d-flex flex-column min-vh-100">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container text-center text-sm-start justify-content-center justify-content-sm-between">
-                <a class="navbar-brand d-flex flex-column flex-sm-row align-items-center align-items-center" href="<?= URL ?>">
-                    <img src="<?= URL; ?>public/assets/img/logo.svg" alt="Logomarca" width="100" height="100" class="d-inline-block align-text-top">
+                <a class="navbar-brand d-flex flex-column flex-sm-row align-items-center align-items-center" href="<?= URL ?>dashboard">
+                    <img src="<?= URL; ?>public/assets/img/icone.png" alt="Logomarca" width="100" class="d-inline-block align-text-top">
                     <div class="ms-3">
-                        <h1 class="fs-2 fw-bold text-white mb-0"><small><?= ENV['APP_NAME'] ?></small></h1>
-                        <div class="text-secondary text-wrap fs-6 fs-md-3"><?= ENV['APP_DESCRIPTION'] ?></div>
+                        <h1 class="fs-2 fw-bold text-white mb-0"><small><?= strtoupper(ENV['APP_NAME']) ?></small></h1>
+                        <div class="text-secondary text-wrap fs-6 fs-md-3"><?= ENV['APP_SLOGAN'] ?></div>
                     </div>
                 </a>
                 <?php if (!empty($_SESSION['loggedUser'])) : ?>

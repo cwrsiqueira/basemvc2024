@@ -12,14 +12,6 @@ class Dashboard extends Controller
 {
     private ?array $data = ['pagina' => 'Dashboard'];
 
-    public function __construct()
-    {
-        if (!$_SESSION['loggedUser']) {
-            header("Location: " . URL);
-            exit;
-        }
-    }
-
     public function index(): void
     {
         $this->loadTemplate('pages/dashboard', $this->data);

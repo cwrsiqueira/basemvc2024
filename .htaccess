@@ -27,5 +27,5 @@ DirectoryIndex public/index.php
 </Files>
 
 # ErrorDocument 403 https://meusite.com.br/
-ErrorDocument 403 http://localhost:8080/
+ErrorDocument 403 http://localhost/
 Options -Indexes

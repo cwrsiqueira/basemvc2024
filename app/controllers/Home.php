@@ -10,15 +10,7 @@ use App\Core\Controller;
 
 class Home extends Controller
 {
-    private ?array $data = ['pagina' => 'Home'];
-
-    public function __construct()
-    {
-        if (isset($_SESSION['loggedUser'])) {
-            header("Location: " . URL . "dashboard");
-            exit;
-        }
-    }
+    private ?array $data = ['pagina' => 'Opinyo - Transforme Feedback em Resultados'];
 
     public function index(): void
     {

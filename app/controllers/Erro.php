@@ -15,6 +15,6 @@ class Erro extends Controller
 
     public function index(): void
     {
-        $this->loadTemplate("erro", $this->data);
+        $this->loadViewInTemplate("erro", $this->data);
     }
 }

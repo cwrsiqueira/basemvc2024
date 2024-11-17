@@ -1,8 +1,8 @@
 <div class="auth-container">
     <div class="auth-box">
         <div class="logo-container text-center mb-4">
-            <a href="<?= URL ?>">
-                <img src="<?= URL; ?>public/assets/img/logo.svg" alt="Logomarca" width="100">
+            <a href="<?= URL ?>dashboard">
+                <img src="<?= URL; ?>public/assets/img/icone_transparente.png" alt="Logomarca" width="100">
             </a>
         </div>
 

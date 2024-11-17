@@ -1,81 +1,96 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        color: #343a40;
+        line-height: 1.6;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade e Termos de Uso - <?= ENV['APP_NAME'] ?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
-<body class="bg-light text-dark">
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Política de Privacidade e Termos de Uso</h1>
+    h1,
+    h2,
+    h3 {
+        color: #007bff;
+    }
 
-        <!-- Política de Privacidade -->
-        <section id="privacy-policy" class="mb-5">
-            <h2 class="text-primary">Política de Privacidade</h2>
-            <p class="lead">Bem-vindo ao <?= ENV['APP_NAME'] ?>! Nós respeitamos a sua privacidade e estamos comprometidos em proteger suas informações pessoais. Esta Política de Privacidade descreve como coletamos, usamos e protegemos seus dados ao utilizar nosso site e serviços.</p>
+    .list-group-item {
+        background-color: transparent;
+    }
 
-            <h3 class="mt-4">1. Introdução</h3>
-            <p>Esta Política de Privacidade aplica-se a todos os usuários do <?= ENV['APP_NAME'] ?>. Ao utilizar nosso site, você concorda com a coleta e uso das informações conforme descrito neste documento.</p>
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
 
-            <h3 class="mt-4">2. Coleta de Informações</h3>
-            <p>Coletamos informações pessoais como nome, email e/ou número de telefone durante o cadastro. Também podemos coletar dados adicionais, como endereço IP, comportamento de navegação e dados de dispositivo, para melhorar sua experiência e prevenir fraudes.</p>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Termos de Uso e Política de Privacidade</h1>
+        <p class="lead text-center">Última atualização: 14 de novembro de 2024</p>
 
-            <h3 class="mt-4">3. Uso das Informações</h3>
-            <ul>
-                <li>Gerenciar sua conta e fornecer acesso aos nossos serviços.</li>
-                <li>Processar transações e gerenciar créditos.</li>
-                <li>Melhorar nossos serviços e o conteúdo oferecido.</li>
-                <li>Enviar notificações importantes, como atualizações de segurança e informações sobre sua conta.</li>
-            </ul>
+        <h2>Termos de Uso</h2>
+        <p>Bem-vindo à plataforma Opinyo! Ao acessar ou usar nossos serviços, você concorda com os seguintes termos:</p>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">1. O Opinyo é uma plataforma SaaS voltada para a coleta e análise de feedbacks de clientes, destinada a empresas e profissionais.</li>
+            <li class="list-group-item">2. O usuário é responsável por fornecer informações corretas e atualizadas ao se cadastrar.</li>
+            <li class="list-group-item">3. É proibido utilizar o Opinyo para fins ilícitos ou que violem direitos de terceiros.</li>
+            <li class="list-group-item">4. Reservamo-nos o direito de suspender ou encerrar contas que violem estes Termos de Uso.</li>
+            <li class="list-group-item">5. As funcionalidades estão sujeitas a alterações para melhorias ou adaptações legais.</li>
+        </ul>
 
-            <h3 class="mt-4">4. Compartilhamento de Informações</h3>
-            <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando necessário para cumprir obrigações legais, proteger nossos direitos, ou quando você der seu consentimento explícito.</p>
+        <h2>Política de Privacidade</h2>
+        <p>Esta Política descreve como coletamos, utilizamos e protegemos suas informações pessoais, em conformidade com a <strong>LGPD</strong> (Lei Geral de Proteção de Dados).</p>
 
-            <h3 class="mt-4">5. Segurança dos Dados</h3>
-            <p>Implementamos medidas de segurança para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+        <h3>1. Dados Coletados</h3>
+        <p>Coletamos os seguintes tipos de dados:</p>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Dados de cadastro: nome, e-mail, telefone, e CNPJ (quando aplicável).</li>
+            <li class="list-group-item">Dados de uso: informações sobre como você utiliza a plataforma, incluindo IP, navegador e interações.</li>
+            <li class="list-group-item">Feedbacks: informações fornecidas pelos clientes dos usuários do Opinyo, como avaliações e comentários.</li>
+        </ul>
 
-            <h3 class="mt-4">6. Direitos do Usuário</h3>
-            <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem o direito de acessar, corrigir ou excluir suas informações pessoais. Você também pode solicitar a limitação ou oposição ao processamento de seus dados.</p>
+        <h3>2. Uso dos Dados</h3>
+        <p>Utilizamos os dados coletados para:</p>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Fornecer e personalizar os serviços da plataforma.</li>
+            <li class="list-group-item">Gerar relatórios e análises de feedbacks.</li>
+            <li class="list-group-item">Realizar comunicações relacionadas aos serviços.</li>
+            <li class="list-group-item">Cumprir obrigações legais e regulatórias.</li>
+        </ul>
 
-            <h3 class="mt-4">7. Retenção de Dados</h3>
-            <p>Manteremos suas informações pessoais apenas pelo tempo necessário para cumprir os propósitos descritos nesta Política de Privacidade ou conforme exigido por lei.</p>
+        <h3>3. Compartilhamento de Dados</h3>
+        <p>Os dados podem ser compartilhados com:</p>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Parceiros tecnológicos, para suporte e melhoria do sistema.</li>
+            <li class="list-group-item">Autoridades legais, quando necessário.</li>
+        </ul>
 
-            <h3 class="mt-4">8. Alterações na Política de Privacidade</h3>
-            <p>Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer mudanças serão notificadas no site e, se significativo, avisaremos por email.</p>
-        </section>
+        <h3>4. Direitos do Titular dos Dados</h3>
+        <p>De acordo com a LGPD, você tem os seguintes direitos:</p>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Solicitar acesso aos dados pessoais coletados.</li>
+            <li class="list-group-item">Corrigir ou atualizar informações incorretas.</li>
+            <li class="list-group-item">Solicitar a exclusão de seus dados, quando aplicável.</li>
+            <li class="list-group-item">Revogar o consentimento para o uso dos dados.</li>
+        </ul>
 
-        <!-- Termos de Uso -->
-        <section id="terms-of-service" class="mb-5">
-            <h2 class="text-primary">Termos de Uso</h2>
-            <p class="lead">Ao utilizar o <?= ENV['APP_NAME'] ?>, você concorda com os Termos de Uso estabelecidos neste documento. Se você não concorda com algum termo, deve cessar o uso do site imediatamente.</p>
+        <h3>5. Segurança dos Dados</h3>
+        <p>Adotamos medidas técnicas e organizacionais para proteger suas informações contra acesso não autorizado, uso indevido e perda.</p>
 
-            <h3 class="mt-4">1. Aceitação dos Termos</h3>
-            <p>Ao utilizar o <?= ENV['APP_NAME'] ?>, você concorda em seguir as regras estabelecidas nestes Termos de Uso.</p>
+        <h3>6. Contato</h3>
+        <p>Para exercer seus direitos ou tirar dúvidas sobre esta Política, entre em contato conosco:</p>
+        <p>E-mail: <a href="mailto:<?= ENV['EMAIL_SUPORTE'] ?>"><?= ENV['EMAIL_SUPORTE'] ?></a></p>
 
-            <h3 class="mt-4">2. Cadastro e Conta de Usuário</h3>
-            <p>Cada usuário deve criar uma conta única utilizando informações verdadeiras e precisas. O uso de múltiplas contas para obtenção de benefícios limitados a uma conta, caso forneçamos, é estritamente proibido e constitui fraude. Violação desta regra poderá resultar na suspensão ou encerramento de todas as contas envolvidas, e os usuários infratores podem ser responsabilizados legalmente.</p>
-
-            <h3 class="mt-4">3. Créditos e Uso do Serviço</h3>
-            <p>O <?= ENV['APP_NAME'] ?> pode oferecer créditos gratuitos durante o cadastro inicial para que você possa testar nossos serviços. Os créditos são limitados a uma única conta por usuário. Tentativas de burlar esse sistema para obter mais créditos são consideradas fraude e poderão resultar em sanções legais.</p>
-
-            <h3 class="mt-4">4. Item 4</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusamus provident maiores temporibus, aperiam delectus nulla corrupti enim ex magnam!</p>
-
-            <h3 class="mt-4">5. Uso Adequado do Site</h3>
-            <p>Você concorda em utilizar o <?= ENV['APP_NAME'] ?> de maneira responsável e conforme as leis aplicáveis. Qualquer tentativa de manipular, hackear ou explorar o site de maneira indevida resultará em ações legais contra o infrator.</p>
-
-            <h3 class="mt-4">6. Alterações nos Termos de Uso</h3>
-            <p>Reservamo-nos o direito de alterar estes Termos de Uso a qualquer momento. As mudanças entrarão em vigor imediatamente após a publicação no site. Recomendamos que você revise os termos regularmente para se manter atualizado.</p>
-
-            <h3 class="mt-4">7. Legislação Aplicável e Foro</h3>
-            <p>Estes Termos de Uso são regidos pelas leis brasileiras. Qualquer disputa relacionada ao uso do <?= ENV['APP_NAME'] ?> será resolvida nos tribunais competentes da cidade onde a empresa está sediada.</p>
-        </section>
+        <h3>7. Alterações nesta Política</h3>
+        <p>Podemos atualizar esta Política de tempos em tempos. As alterações serão notificadas na plataforma.</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+    <footer>
+        <p>&copy; 2024 Opinyo. Todos os direitos reservados.</p>
+    </footer>

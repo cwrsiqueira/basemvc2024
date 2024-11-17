@@ -48,11 +48,11 @@ class Login extends Controller
                 'old' => [],
             ];
 
-            header("Location: " . URL);
+            header("Location: " . URL . "dashboard");
             exit;
         }
 
-        $this->loadGuestTemplate('layouts/login', $this->data);
+        $this->loadGuestTemplate('autenticacao/login', $this->data);
     }
 
     public function logar()
@@ -104,7 +104,7 @@ class Login extends Controller
 
     public function cadastro(): void
     {
-        $this->loadGuestTemplate('layouts/cadastro', $this->data);
+        $this->loadGuestTemplate('autenticacao/cadastro', $this->data);
     }
 
     public function cadastrar(): void
@@ -168,7 +168,7 @@ class Login extends Controller
             'old' => [],
         ];
 
-        header("Location: " . URL);
+        header("Location: " . URL . "dashboard");
     }
 
     public function enviarEmailCadastroSendGrid(string $paraNome, string $paraEmail, string $token): void
@@ -219,7 +219,7 @@ class Login extends Controller
         <div class="email-container">
             <div class="email-header">
                 <h1>' . ENV['APP_NAME'] . '</h1>
-                <p>' . ENV['APP_DESCRIPTION'] . '</p>
+                <p>' . ENV['APP_SLOGAN'] . '</p>
             </div>
             <div class="email-body my-4">
                 <p>Olá, ' . htmlspecialchars($paraNome) . '.</p>
@@ -229,7 +229,7 @@ class Login extends Controller
             </div>
             <div class="email-footer">
                 <p>&copy; 2024 ' . ENV['APP_NAME'] . ' - Todos os direitos reservados.</p>
-                <p><a href="' . URL . '/home/termos-de-uso-e-politicas-de-privacidade" style="color: #007bff;">Termos de Uso e Políticas de Privacidade</a></p>
+                <p><a href="' . URL . 'termos-de-uso" style="color: #007bff;">Termos de Uso e Políticas de Privacidade</a></p>
             </div>
         </div>
     </body>
@@ -298,7 +298,7 @@ class Login extends Controller
         <div class="email-container">
             <div class="email-header">
                 <h1>' . ENV['APP_NAME'] . '</h1>
-                <p>' . ENV['APP_DESCRIPTION'] . '</p>
+                <p>' . ENV['APP_SLOGAN'] . '</p>
             </div>
             <div class="email-body my-4">
                 <p>Olá, ' . htmlspecialchars($paraNome) . '.</p>
@@ -308,7 +308,7 @@ class Login extends Controller
             </div>
             <div class="email-footer">
                 <p>&copy; 2024 ' . ENV['APP_NAME'] . ' - Todos os direitos reservados.</p>
-                <p><a href="' . URL . '/home/termos-de-uso-e-politicas-de-privacidade" style="color: #007bff;">Termos de Uso e Políticas de Privacidade</a></p>
+                <p><a href="' . URL . 'termos-de-uso" style="color: #007bff;">Termos de Uso e Políticas de Privacidade</a></p>
             </div>
         </div>
     </body>
@@ -332,6 +332,6 @@ class Login extends Controller
     public function deslogar()
     {
         unset($_SESSION['loggedUser']);
-        header("Location: " . URL);
+        header("Location: " . URL . "dashboard");
     }
 }

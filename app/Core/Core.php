@@ -67,6 +67,7 @@ class Core extends Config
         if (method_exists($classPage, $method)) {
             $classPage->$method(); // Chama o método dinamicamente
         } else {
+            header("Location: " . URL . "erro");
             die("Erro: Método '{$method}' não encontrado em '{$this->urlController}'. Tente novamente ou contacte o suporte: " . EMAILSUPORTE);
         }
     }
