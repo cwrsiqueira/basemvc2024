@@ -99,7 +99,7 @@ class Login extends Controller
             'old' => [],
         ];
 
-        header("Location: " . URL);
+        header("Location: " . URL . "dashboard");
     }
 
     public function cadastro(): void

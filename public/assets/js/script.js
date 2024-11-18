@@ -1,20 +1,69 @@
-// Sincronizar o desaparecimento do vídeo e a aparecimento da logo
-setTimeout(() => {
-  const video = document.getElementById("heroVideo");
-  const content = document.getElementById("content");
+// Sidebar
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const mainContent = document.querySelector("main"); // Ajuste se necessário
+const menuPullToggle = document.querySelector("#menuPullToggle");
+const menuPullToggleArrowLeft = document.querySelector(
+  "#menuPullToggle .fa-chevron-left"
+);
+const menuPullToggleArrowRight = document.querySelector(
+  "#menuPullToggle .fa-chevron-right"
+);
 
-  // Esmaecer o vídeo
-  video.style.transition = "opacity 1.5s";
-  video.style.opacity = "0";
+// Alternar a visibilidade do sidebar
+menuToggle.addEventListener("click", () => {
+  menuPullToggleArrowLeft.classList.toggle("d-none");
+  menuPullToggleArrowRight.classList.toggle("d-none");
+  sidebar.classList.toggle("show");
+});
 
-  // Simultaneamente, mostrar o conteúdo
-  content.style.opacity = "1";
+menuPullToggle.addEventListener("click", () => {
+  menuPullToggleArrowLeft.classList.toggle("d-none");
+  menuPullToggleArrowRight.classList.toggle("d-none");
+  sidebar.classList.toggle("show");
+});
 
-  // Após a transição, remover o vídeo
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebarItems = document.querySelectorAll("#sidebar ul li");
+  const currentPath = window.location.pathname; // Obtém o caminho base da URL (ex.: "/dashboard")
+
+  sidebarItems.forEach((item) => {
+    // Verifica se o texto do item corresponde ao nome da página atual
+    const itemPath = item.textContent.trim().toLowerCase(); // Ex.: "dashboard"
+    if (currentPath.includes(itemPath)) {
+      item.classList.add("active");
+    }
+  });
+});
+
+// Ajustar o conteúdo principal conforme o estado do sidebar (opcional)
+// sidebar.addEventListener("transitionend", () => {
+//   if (sidebar.classList.contains("show")) {
+//     mainContent.style.marginLeft = "260px";
+//   } else {
+//     mainContent.style.marginLeft = "0";
+//   }
+// });
+
+if (document.getElementById("heroVideo") != null) {
+  // Sincronizar o desaparecimento do vídeo e a aparecimento da logo
   setTimeout(() => {
-    video.style.display = "none";
-  }, 1500); // Tempo suficiente para o vídeo sumir
-}, 5000); // Espera de 5 segundos antes de começar as animações
+    const video = document.getElementById("heroVideo");
+    const content = document.getElementById("content");
+
+    // Esmaecer o vídeo
+    video.style.transition = "opacity 1.5s";
+    video.style.opacity = "0";
+
+    // Simultaneamente, mostrar o conteúdo
+    content.style.opacity = "1";
+
+    // Após a transição, remover o vídeo
+    setTimeout(() => {
+      video.style.display = "none";
+    }, 1500); // Tempo suficiente para o vídeo sumir
+  }, 5000); // Espera de 5 segundos antes de começar as animações
+}
 
 function acceptCookies() {
   var banner = document.getElementById("cookie-banner");

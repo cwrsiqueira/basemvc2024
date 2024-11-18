@@ -50,21 +50,7 @@
                         <div class="text-secondary text-wrap fs-6 fs-md-3"><?= ENV['APP_SLOGAN'] ?></div>
                     </div>
                 </a>
-                <?php if (!empty($_SESSION['loggedUser'])) : ?>
-                    <div>
-                        <?php
-                        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") .
-                            "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
-                        echo $url;
-                        if ($url !== URL . 'dashboard'):
-                        ?>
-                            <a href="<?= URL ?>" class="btn btn-sm btn-outline-light">Dashboard</a>
-                        <?php else: ?>
-                            <a href="<?= URL ?>login/deslogar" class="btn btn-sm btn-outline-light">Sair</a>
-                        <?php endif; ?>
-                    </div>
-                <?php else : ?>
+                <?php if (empty($_SESSION['loggedUser'])) : ?>
                     <div>
                         <a href="<?= URL ?>login/" class="btn btn-sm btn-outline-light mx-1"><small>Login</small></a>
                         <a href="<?= URL ?>login/cadastro" class="btn btn-sm btn-outline-light mx-1"><small>Cadastrar</small></a>
@@ -73,7 +59,33 @@
             </div>
         </nav>
 
-        <?php $this->loadViewInTemplate($viewName, $viewData);  ?>
+        <!-- Botão de menu (visível apenas em dispositivos móveis) -->
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="d-flex">
+            <ul class="flex-1 w-100">
+                <li><a href="<?= URL ?>dashboard">
+                        <div class="w-100">Dashboard</div>
+                    </a></li>
+                <li><a href="<?= URL ?>sobre">
+                        <div class="w-100">Sobre</div>
+                    </a></li>
+                <li><a href="<?= URL ?>login/deslogar">Sair</a></li>
+            </ul>
+            <!-- Botão de puxar o menu -->
+            <button class="menu-pull-toggle" id="menuPullToggle" style="width: 30px;">
+                <i class="fa-solid fa-chevron-right fa-2xl"></i>
+                <i class="fa-solid fa-chevron-left fa-2xl d-none"></i>
+            </button>
+        </aside>
+
+
+        <main>
+            <?php $this->loadViewInTemplate($viewName, $viewData);  ?>
+        </main>
 
         <footer class="footer text-center bg-dark text-light py-3 mt-auto d-flex flex-column gap-3">
             <div class="row">

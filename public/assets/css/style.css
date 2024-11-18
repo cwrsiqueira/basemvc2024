@@ -1,5 +1,5 @@
 /* Importação da Fonte */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 /* Estilos Gerais */
 * {
@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #e0eafc;
   /* Fundo suave para reduzir a intensidade do gradiente */
   background: -webkit-linear-gradient(to bottom, #d5e4c5, #b2d3ee);
@@ -188,7 +188,7 @@ body {
 
 .match-result {
   font-size: 22px;
-  color: #4CAF50;
+  color: #4caf50;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 15px;
@@ -361,4 +361,56 @@ body {
 
 .auth-form .text-center a:hover {
   text-decoration: underline;
+}
+
+/* Sidebar estilo */
+aside {
+  background-color: #212529; /* Cor do navbar */
+  color: white;
+  /* height: 100%; */
+  width: 250px;
+  position: fixed;
+  top: 142px;
+  bottom: 96px;
+  left: 0;
+  transform: translateX(-220px);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1040;
+}
+aside.show {
+  transform: translateX(0);
+}
+aside ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+aside ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+aside ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+aside ul li.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Cor de destaque */
+  font-weight: bold; /* Opcional */
+  border-left: 5px solid #ffffff; /* Borda para indicar o ativo */
+}
+aside ul li a {
+  text-decoration: none;
+  color: white;
+}
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1050;
+  background-color: #212529;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 5px;
 }

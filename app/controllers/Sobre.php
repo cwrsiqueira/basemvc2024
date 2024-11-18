@@ -14,6 +14,6 @@ class Sobre extends Controller
 
     public function index(): void
     {
-        $this->loadTemplate('sobre', $this->data);
+        $this->loadTemplate('pages/sobre', $this->data);
     }
 }

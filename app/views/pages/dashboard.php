@@ -1,5 +1,7 @@
 <div class="container my-5">
 
+    <h1>Dashboard</h1>
+
     <?php if (!empty($_SESSION['loggedUser'])): ?>
 
         Olá, <?= $_SESSION['loggedUser']['nome'] ?>. Você está logado!
